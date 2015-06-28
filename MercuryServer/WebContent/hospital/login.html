@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hospital | Log in</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+     <script src="jquery.mobile/jquery-1.7.2.min"></script>
+   <!-- Bootstrap 3.3.4 -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+     <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- iCheck -->
+    <link href="../plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
+    <!-- ankit registration -->
+    	 <script src="../commonJs/general.js"></script>
+ 		<script src="js/hospital.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+     <!--Load Kandy JS files (required - jQuery is required too!)-->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/fcs/3.0.4/fcs.js"></script>
+    <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.2.2/kandy.js"></script>
+    <script src="kandyjs/makevideocall.js"></script>
+    
+    <script type="text/javascript">function start(){var eventSource=new EventSource("HelloServlet");eventSource.onmessage=function(event){document.getElementById('UserName').innerHTML=event.data;};}</script>
+    
+    
+  </head>
+ <body class="login-page" onload="start();">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="../../index2.html"><b>Hospital</b>Login</a>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+       
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" id="UserName" placeholder="Username"/>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" id="Password" placeholder="Password"/>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+           
+            <div class="col-xs-4">
+              <button onclick="login();" id="login-btn" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div><!-- /.col -->
+          </div>
+
+
+        <a href="register.html" class="text-center">Register a new membership</a>
+
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+    
+  </body>
+</html>

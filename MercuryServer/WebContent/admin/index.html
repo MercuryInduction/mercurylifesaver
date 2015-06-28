@@ -1,0 +1,96 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Mercury Admin</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="index.css" /> 
+
+    <script src="jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+  
+	<!-- CDN Respositories: For production, replace lines above with these uncommented minified versions -->
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />-->
+	<!-- <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+	<!-- <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>-->
+	</head>
+  
+  <body onload="init();">
+	<div data-role="page" id="page-home" class="type-interior" data-theme="b">
+
+	<div data-role="header" data-theme="b">
+		<h1>Mercury Admin Panel</h1>
+ 		<a href="#" data-icon="home" data-iconpos="notext" id="intro" class="ui-btn-right">intro</a>
+	</div>
+
+	<div data-role="content" data-theme="c">			
+	
+		<div class="content-primary">
+		    <div class="api-div" id="api-intro">
+		         <h2>Mercury Admin </h2>
+				<blockquote>
+  					<p>For Instant Relief and minimize fraudulent Insurance cases</p>
+				</blockquote>
+
+				<div>
+								<h4>Register<strong>Kandy </strong>users</h4><br>
+				
+<label for="id">Id</label>
+<input type="text" name="fname" id="id" placeholder="id">
+
+<label for="username">User Name</label>
+<input type="text" name="fname" id="username" placeholder="Username">
+
+<label for="password">Password</label>
+<input type="text" name="fname" id="password" placeholder="">
+
+<label for="key">Key</label>
+<input type="text" name="fname" id="key" placeholder="">
+
+<label for="types">Provider Type</label>
+<input type="text" name="fname" id="types" placeholder=""><br>
+
+<div class="ui-block-a"><div data-role="button" onclick="">Update</div>
+
+<br>
+				
+				<h4>Rewards and Coupons</h4><br><br>
+				
+<label for="id">Id</label>
+<input type="text" name="fname" id="id" placeholder="id">
+
+<label for="coupon code">Coupon code</label>
+<input type="text" name="fname" id="couponcode" placeholder="Username">
+
+<label for="allocated">Allocated</label>
+<input type="text" name="fname" id="allocated" placeholder="">
+
+<label for="Used">Used</label>
+<input type="text" name="fname" id="used" placeholder="">
+
+<label for="types">Provider Type</label>
+<input type="text" name="fname" id="types" placeholder=""><br>
+
+<div class="ui-block-a"><div data-role="button" onclick="">Send Coupons</div>
+
+<br>
+	
+<a href="http://cdn.branch.io/branchster-angular"><div class="ui-block-a"><div data-role="button">For social sharing , SMS sharing Click Here !!!!!!</div></a><br>
+		
+				
+				<p id="copyright">&copy; 2015 The Induction</p>
+				</div>		    					
+			</div>
+
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer-docs" data-theme="b">
+		<p>&copy; 2015 The Induction</p>
+	</div>	
+	</div>		
+  </body>
+</html>

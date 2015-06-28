@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+/* $(document).ready(function(){
+  $("button").click(function(){
+    $.get("http://10.203.28.199:8181/Mercury_web/InsertData",
+    {
+      name:"Donald Duck",
+      city:"Duckburg",
+      uid:"35544",
+      username:"member1",
+      password:"Change!1",
+      email:"raktim@gmail.com"
+    },
+    function(data,status){
+     alert("Hey");
+    	// alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+}); */
+
+
+$(document).ready(function(){
+	  $("button").click(function(){ 
+		  getMessage(); 
+	  });
+	  var xhr=null;
+
+	  function createRequest(url, method) {
+		
+		 
+		 		 
+	      xhr = new XMLHttpRequest();
+	     
+	      
+	      
+	      if ("withCredentials" in xhr) {
+	          // XHR for Chrome/Firefox/Opera/Safari.
+	          xhr.open(method, url, true);
+	          xhr.setRequestHeader("Content-type","application/json"); 
+
+	      } else if (typeof XDomainRequest != "undefined") {
+	          // XDomainRequest for IE.
+	          xhr = new XDomainRequest();
+	          xhr.open(method, url);
+	      } else {
+	          // CORS not supported.
+	          alert("error CORS Not Supported");
+	          xhr = null;
+	      }
+	  }  
+	  
+	  
+	  function getMessage() {
+		  alert("hhh");
+		  //var data = { 'id': "22300" , 'name': "raktim"};	  	 
+		  var data="8447&baas&12&13&14&100&200&50";
+		 
+	      var url = "http://10.203.28.199:8181/Mercury_web/rest/UserInfoService/insertData/"+data;
+
+	     
+	      createRequest(url, "GET");
+	      
+	      xhr.onload = function() {
+	         // var text = xhr.responseText;
+	          var text = xhr.responseText;
+	         // alert("alert : "+text);
+	          var obj = jQuery.parseJSON(text);
+	          
+	          alert("Uid : "+obj.Uid);
+	          
+	          
+	          
+	          //var title = getTitle(text);
+	          //alert('Response from CORS request to ' + url + ': ' + title);
+	        };
+
+	        xhr.onerror = function() {
+	          alert('Woops, there was an error making the request.');
+	        }; 
+        
+	        xhr.send();
+	       // xhr.onreadystatechange = handleResponse; 
+	      
+	  }
+	  function handleResponse() {
+	      if (xhr.readyState == 4 && xhr.status == 200) {
+	          var xmlDoc = xhr.resonseXML;
+	          alert(xmlDoc.getElementsByTagName("Name"));
+	                          
+	      }
+	  }
+
+});
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
+
+
